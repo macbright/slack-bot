@@ -10,6 +10,7 @@ gem 'puma'
 gem 'sinatra'
 gem 'dotenv'
 gem 'faye-websocket'
+gem 'dentaku', '~> 2.0', '>= 2.0.7'
 
 group :development, :test do
   gem 'rake'

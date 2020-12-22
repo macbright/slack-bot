@@ -11,6 +11,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     concurrent-ruby (1.1.7)
     crack (0.4.4)
+    dentaku (2.0.11)
     diff-lcs (1.4.4)
     dotenv (2.7.6)
     eventmachine (1.2.7)
@@ -88,6 +89,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dentaku (~> 2.0, >= 2.0.7)
   dotenv
   faye-websocket
   foreman

@@ -7,12 +7,10 @@ class Methods
       if regx.match(input[i]) != nil
         n += input[i]
       else
-
         result << n if n != ''
         result << input[i]
         n = ''
       end
-      
     end
     result << n
     result 

@@ -1,3 +1,4 @@
+require_relative '../extract_input'
 
 module SlackMathbot
   module Commands
@@ -6,7 +7,7 @@ module SlackMathbot
       
       def self.call(client, data, match)
         input = match[:expression] if match.names.include?('expression')
-        result = input.to_s.split('')
+        result = Methods.extract_input(input)
         regx = /\A[-+]?\d+\z/
         if result.length != 3 || result[1] != '+' || regx.match(result[0]) == nil || regx.match(result[2]) == nil
            client.say(channel: data.channel, text: 
@@ -14,7 +15,7 @@ module SlackMathbot
         else 
           result = result[0].to_i + result[2].to_i
           result = result.to_s if result
-          client.say(channel: data.channel, text: result)
+          client.say(channel: data.channel, text:  result)
         end
       rescue StandardError => e
         client.say(channel: data.channel, text: "Sorry, #{e.message}.")

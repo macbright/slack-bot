@@ -39,7 +39,7 @@ $ cd slack-bot
 `` 
 <br /> you will have to go slack [website](https://slack.com/services/new/bot)
 	to create your own API TOKEN. 
-	after getting the API TOKEN, create a .env in your root directory save the token like this: SLACK_API_TOKEN = your_api_token.
+	after getting the API TOKEN, create a .env in your root directory save the token like this: SLACK_API_TOKEN = your_api_token. and then add the .env file to .gitignore to avoid commiting the file to github
 
 `$ rspec` 
 <br /> check if all the test are passing
